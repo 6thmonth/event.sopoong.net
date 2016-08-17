@@ -120,10 +120,12 @@
         endDate.setMonth(7);
         endDate.setDate(31);
         endDate.setHours(23);
-        console.log(endDate)
+        endDate.setMinutes(59);
+
 	$('.countdown').ClassyCountdown({
-		end: endDate.getTime(),
-                now:  $.now(),
+            //end: endDate.getTime(),
+          end: 1472655599,
+            now:  $.now() / 1000,
 	    style: {
 	        element: "",
 	        textResponsive: .5,
