@@ -1420,6 +1420,10 @@ ul.dropdown-menu > li > a {
 
 /*--------/ Slider ----------*/
 
+#home-slider li.item img {
+    width: 700px;
+}
+
 #home-slider li.item .forth-slider-text > img {
 	width: 60px;
 	margin-left: 15%;
