@@ -330,14 +330,18 @@ $(document).ready(function() {
     e.preventDefault();
 
     var values = $(this).serializeArray();
-    var name = values[0].value;
-    var whoisthis = values[1].value;
-    var attend = values[2].value;
+    var howCome = values[0].value;
+    var bestProduct = values[1].value;
+    var bestVenture = values[2].value;
+    var name = values[3].value;
+    var email = values[4].value;
 
     var rsvpKey = database.ref('event/survey').push({
-      'name': name,
-      'whoisthis': whoisthis,
-      'attend': attend
+      name: name,
+      email: email,
+      howCome: howCome,
+      bestProduct: bestProduct,
+      bestVenture: bestVenture
     }).key;
 
     if (rsvpKey) alert('성공적으로 등록되었습니다.');
