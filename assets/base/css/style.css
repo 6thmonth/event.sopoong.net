@@ -54,7 +54,14 @@ section {width:100%; overflow:hidden; text-align:center; position:relative; padd
 a {color:white;-webkit-transition:all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-out 0s;-o-transition: all .3s ease-in-out 0s;transition: all .3s ease-in-out 0s;}
 body a:hover, body a:focus {text-decoration: none; outline: none;color: white;-webkit-transition:all .3s ease 0s;-moz-transition: all .3s ease 0s;-o-transition: all .3s ease 0s;transition: all .3s ease 0s; }
 .container { position: relative; z-index: 1; padding: 60px 16px 48px;}
-h2 {font:46px; text-align:center; margin:0 0 20px 0; font-family: 'Courgette', cursive; }
+
+h2 {
+    font:46px;
+    text-align:center;
+    margin:0 0 20px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
 h2:after {display: block; content: ""; width: 16px; height: 26px; margin: 12px auto 0; }
 h2 b {font:400 46px/48px 'Open Sans', sans-serif;}
 h2 span {font:300 26px/40px 'Open Sans', sans-serif;padding:0 13px 0 0;}
@@ -105,7 +112,18 @@ header {position:fixed; height:64px; width:100%; z-index:999; }
 .main_menu_btn_open .line1, .main_menu_btn_open:hover .line1 {-ms-transform: translate(0, 9px) rotate(45deg); -webkit-transform: translate(0, 9px) rotate(45deg); transform: translate(0, 9px) rotate(45deg);background-color: #ffffff; }
 .main_menu_btn_open .line2 {opacity: 0;}
 .main_menu_btn_open .line3, .main_menu_btn_open:hover .line3 {-ms-transform: translate(0, -9px) rotate(-45deg); -webkit-transform: translate(0, -9px) rotate(-45deg); transform: translate(0, -9px) rotate(-45deg);background-color: #ffffff; }
-.front-sections{z-index: 99; overflow: visible;background-color: #ffffff;background-position: top center; background-size: cover; background-repeat: no-repeat; padding: 0 0 180px; margin-top: -2px; }
+
+.front-sections{
+    z-index: 99;
+    overflow: visible;
+    background-color: #ffffff;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 0 100px;
+    margin-top: -2px;
+}
+
 .front-sections:before{position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ""; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: skew(0deg, -3.23deg); -moz-transform: skew(0deg, -3.23deg); -o-transform: skew(0deg, -3.23deg); -ms-transform: skew(0deg, -3.23deg); transform: skew(0deg, -3.23deg); background-color: #ffffff; margin-top: -58px; background-size:cover; background-repeat: no-repeat; }
 
 #counter-wrapper.front-sections:before {
@@ -227,7 +245,12 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 }
 .bridegroom-family.col-md-4 {margin-top: 117px; }
 .name-text-sec > h2 {font-size: 22px; font-weight: 700; font-family: 'Open Sans', sans-serif; letter-spacing: -0.2px; margin-top: 30px; height: 25px; }
-.name-text-sec > p {font-size: 19px; }
+
+.name-text-sec > p {
+    font-size: 19px;
+    padding: 0px 30px;
+}
+
 .bridegroom-section > img {max-width: 100%; float: left; }
 #groom-section > img {float: right; }
 .parents-detail > img {max-width: 100%; border-radius: 100%; }
@@ -243,7 +266,11 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 .bridegroom-friend .owl-theme .owl-controls .owl-buttons div {background: transparent none repeat scroll 0 0; color: #131B28; font-size: 25px; margin: 0; opacity: 1; padding: 0; top: 40%;-webkit-transition:all .3s ease 0s;-moz-transition: all .3s ease 0s;-o-transition: all .3s ease 0s;transition: all .3s ease 0s; }
 .bridegroom-friend .owl-theme .owl-controls .owl-buttons:hover div { color: #ed2539; }
 .wedd-seperator > img {max-width: 100%;}
-#home-slider .item img {display: block; height: auto;}
+#home-slider .item img {
+    display: block;
+    height: auto;
+    width: 1300px;
+}
 .family-info.row .parents-detail:hover .imgoverlay {background-color: #ED2437; opacity: 0.6; }
 .family-info a i.icon.wedding-gallery-search {bottom: 0; color: #fff; display: inline-block; font-size: 25px; height: 30px; left: 0; margin-top: -10px; opacity: 0; position: absolute; right: 0; top: 50%;-webkit-transform: scale(0.5); -moz-transform: scale(0.5); -o-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); -webkit-transition:all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-out 0s;-o-transition: all .3s ease-in-out 0s;transition: all .3s ease-in-out 0s; }
 .family-info.row .parents-detail:hover .imgoverlay a i.icon.wedding-gallery-search { opacity: 1;-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }

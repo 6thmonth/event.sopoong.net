@@ -114,9 +114,16 @@
 
 	// Countdown
 	var cutt = $.now();
+        var startDate = new Date();
+        var endDate = new Date();
+        endDate.setYear(2016);
+        endDate.setMonth(7);
+        endDate.setDate(31);
+        endDate.setHours(23);
+        console.log(endDate)
 	$('.countdown').ClassyCountdown({
-		end: $.now() + 864000,
-		now: $.now(),
+		end: endDate.getTime(),
+                now:  $.now(),
 	    style: {
 	        element: "",
 	        textResponsive: .5,
