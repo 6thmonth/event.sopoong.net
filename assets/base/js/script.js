@@ -336,6 +336,31 @@ $(document).ready(function() {
     var name = values[3].value;
     var email = values[4].value;
 
+    if (!howCome) {
+      alert('오게된 경로를 적어주세요');
+      return false;
+    }
+
+    if (!bestProduct) {
+      alert('가장 마음에 드는 상품을 적어주세요');
+      return false;
+    }
+
+    if (!bestVentures) {
+      alert('가장 응원하고 싶은 소셜벤처를 적어주세요');
+      return false;
+    }
+
+    if (!name) {
+      alert('성함을 적어주세요');
+      return false;
+    }
+
+    if (!email) {
+      alert('이메일을 알려주세요');
+      return false;
+    }
+
     var rsvpKey = database.ref('event/survey').push({
       name: name,
       email: email,
@@ -345,6 +370,7 @@ $(document).ready(function() {
     }).key;
 
     if (rsvpKey) alert('성공적으로 등록되었습니다.');
+    return true;
   });
 })
 

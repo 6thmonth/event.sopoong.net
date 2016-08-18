@@ -127,7 +127,7 @@ header {position:fixed; height:64px; width:100%; z-index:999; }
 .front-sections:before{position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ""; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: skew(0deg, -3.23deg); -moz-transform: skew(0deg, -3.23deg); -o-transform: skew(0deg, -3.23deg); -ms-transform: skew(0deg, -3.23deg); transform: skew(0deg, -3.23deg); background-color: #ffffff; margin-top: -58px; background-size:cover; background-repeat: no-repeat; }
 
 #counter-wrapper.front-sections:before {
-    background-image: url("../images/beta/bg_counter.jpg");
+    background-image: url("../images/beta/bg_sopoong.jpg");
     background-position: center;
     background-size: 1920px 1077px;
 }
@@ -367,9 +367,8 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 }
 
 .forth-slide-sectext {
-	text-align: center;
-	margin-top: 65px;
-
+    text-align: center;
+    margin-top: 65px;
 }
 
 #home-slider .forth-slide-sectext img.slider-ring {
@@ -414,7 +413,7 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
     font-size: 27px;
     color: #fff;
     font-weight: 200;
-    line-height: 50px;
+    line-height: 60px;
 }
 
 #home-slider .forth-slide-sectext h3 span.main-text {
@@ -1436,10 +1435,9 @@ ul#sktwed-main-sidebar ul li {padding: 0 20px; }
 }
 
 
-	#counter-wrapper.front-sections:before{
-		background-position: center;
-
-	}
+#counter-wrapper.front-sections:before{
+    background-position: center;
+}
 
 .video-blog .video-overlay .outer-sphare {
     height: 90px;
@@ -1610,13 +1608,13 @@ a.view-all-link i.fa {
 
 @media (min-width: 500px) and (max-width: 600px) {
 
-		#counter-wrapper.front-sections:before{
-		background-position: center;
-	}
+    #counter-wrapper.front-sections:before{
+        background-position: center;
+    }
 
-	.gallery-blog #gallery-post-format .owl-controls {
-    bottom: 25%;
-}
+    .gallery-blog #gallery-post-format .owl-controls {
+        bottom: 25%;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 767px) {
