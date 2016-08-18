@@ -205,9 +205,31 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 /* Maids*/
 
 .maids-overlay{position: absolute;right: 0;left: 0;bottom: 0;top: 0;background-color: rgba(255,255,255,0.9);-webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: skew(0deg, -3.23deg); -moz-transform: skew(0deg, -3.23deg); -o-transform: skew(0deg, -3.23deg); -ms-transform: skew(0deg, -3.23deg); transform: skew(0deg, -3.23deg); margin-top: -58px; }
-.section-heading-content h2.col-md-3 {margin-top: 0;color: #131b28;font-weight: normal;letter-spacing: -0.6px; text-align: left;font-family: "Courgette",cursive;font-size: 29px;}
+
+.section-heading-content h2.col-md-3 {
+    margin-top: 0;
+    color: #131b28;
+    font-weight: normal;
+    letter-spacing: -0.6px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 29px;
+}
 .section-heading-content p {color: #131b28; font-family: 'Open Sans', sans-serif; font-size: 19px; font-weight: 400; letter-spacing: -0.3px; text-align: left; }
-.name-text-sec {background-image: url("../images/bride-BG.png"); background-position: center; color: hsl(0, 0%, 100%); padding: 20px; position: absolute; height: 261px; width: 303px; padding: 68px 0; bottom: -228px; background-repeat: no-repeat;}
+
+.name-text-sec {
+    background-image: url("../images/bride-BG.png");
+    background-position: center;
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    position: absolute;
+    height: 261px;
+    width: 303px;
+    padding: 87px 0;
+    bottom: -228px;
+    background-repeat: no-repeat;
+}
+
 #groom-section .name-text-sec {
     background-image: url("../images/groom-BG.png");
     right: 24px;
@@ -266,11 +288,12 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 .bridegroom-friend .owl-theme .owl-controls .owl-buttons div {background: transparent none repeat scroll 0 0; color: #131B28; font-size: 25px; margin: 0; opacity: 1; padding: 0; top: 40%;-webkit-transition:all .3s ease 0s;-moz-transition: all .3s ease 0s;-o-transition: all .3s ease 0s;transition: all .3s ease 0s; }
 .bridegroom-friend .owl-theme .owl-controls .owl-buttons:hover div { color: #ed2539; }
 .wedd-seperator > img {max-width: 100%;}
+
 #home-slider .item img {
     display: block;
     height: auto;
-    width: 1300px;
 }
+
 .family-info.row .parents-detail:hover .imgoverlay {background-color: #ED2437; opacity: 0.6; }
 .family-info a i.icon.wedding-gallery-search {bottom: 0; color: #fff; display: inline-block; font-size: 25px; height: 30px; left: 0; margin-top: -10px; opacity: 0; position: absolute; right: 0; top: 50%;-webkit-transform: scale(0.5); -moz-transform: scale(0.5); -o-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); -webkit-transition:all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-out 0s;-o-transition: all .3s ease-in-out 0s;transition: all .3s ease-in-out 0s; }
 .family-info.row .parents-detail:hover .imgoverlay a i.icon.wedding-gallery-search { opacity: 1;-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
@@ -282,7 +305,11 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 .counter-overlay{position: absolute;right: 0;left: 0;bottom: 0;top: 0;background-color: rgba(0, 0, 0, 0.24);-webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: skew(0deg, -3.23deg); -moz-transform: skew(0deg, -3.23deg); -o-transform: skew(0deg, -3.23deg); -ms-transform: skew(0deg, -3.23deg); transform: skew(0deg, -3.23deg); margin-top: -58px; }
 .white-heading-content {margin-top: 85px;}
 .section-heading-content {margin-top: 85px;}
-.white-heading-content h2.col-md-3,.white-heading-content p {color: #ffffff;}
+
+.white-heading-content h2.col-md-3,.white-heading-content p {
+    color: #ffffff;
+}
+
 .ClassyCountdown-wrapper > div{height: 202px !important; }
 /* Counter */
 
@@ -983,12 +1010,59 @@ ul.dropdown-menu > li:last-child > a{
 
 
 /* RSVP */
-.rsvp-overlay{position: absolute;right: 0;left: 0;bottom: 0;top: 0;background-color: #ED2437;opacity: 0.8;-webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: skew(0deg, -3.23deg); -moz-transform: skew(0deg, -3.23deg); -o-transform: skew(0deg, -3.23deg); -ms-transform: skew(0deg, -3.23deg); transform: skew(0deg, -3.23deg); margin-top: -58px; }
+.rsvp-overlay{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: white !important;
+    opacity: 0.8;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: skew(0deg, -3.23deg);
+    -moz-transform: skew(0deg, -3.23deg);
+    -o-transform: skew(0deg, -3.23deg); 
+    -ms-transform: skew(0deg, -3.23deg);
+    transform: skew(0deg, -3.23deg);
+    margin-top: -58px;
+}
+
 #rsvp-wrapper .section-heading-content.white-heading-content h2:after {background-color: #ffffff;margin-top: 10px;width: 70px;}
-form#rsvpform input,form#rsvpform select{ padding-bottom: 11px;border-radius: 0; background: transparent none repeat scroll 0 0; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; background: transparent none repeat scroll 0 0; border-color: -moz-use-text-color -moz-use-text-color #ffffff; border-image: none; border-style: none none solid; border-width: 0 0 1px; color: #ffffff; font-family: 'Open Sans'; font-size: 30px; font-weight: 300; width: 95%;border-bottom-color:#ffffff; }
+
+form#rsvpform input,form#rsvpform select {
+    padding-bottom: 11px;
+    border-radius: 0;
+    background: transparent none repeat scroll 0 0;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #666666;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    color: #666666;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 300;
+    width: 95%;
+    border-bottom-color: #666666;
+}
 form#rsvpform select option { color: #131b28; }
 .submit-section {margin: 0 auto; position: relative; width: 43.5%}
-form#rsvpform input[type='submit']{border: 1px solid #ffffff; border-radius: 35px; font-family: 'Courgette',cursive; font-size: 30px; height: 66px; letter-spacing: -0.6px;padding: 0 36px 0 0;}
+
+form#rsvpform input[type='submit'] {
+    border: 1px solid #666666;
+    border-radius: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    height: 66px;
+    letter-spacing: -0.6px;
+    padding: 0 36px 0 0;
+}
+
 .name-field.col-md-10 {float: none;}
 .rsvp-form-wrapper { margin-top: 80px; }
 form#rsvpform { margin: 0 auto; width: 80%; }
