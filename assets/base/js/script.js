@@ -346,7 +346,7 @@ $(document).ready(function() {
       return false;
     }
 
-    if (!bestVentures) {
+    if (!bestVenture) {
       alert('가장 응원하고 싶은 소셜벤처를 적어주세요');
       return false;
     }
