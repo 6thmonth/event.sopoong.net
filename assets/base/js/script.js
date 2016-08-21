@@ -332,9 +332,8 @@ $(document).ready(function() {
     var values = $(this).serializeArray();
     var howCome = values[0].value;
     var bestProduct = values[1].value;
-    var bestVenture = values[2].value;
-    var name = values[3].value;
-    var email = values[4].value;
+    var name = values[2].value;
+    var email = values[3].value;
 
     if (!howCome) {
       alert('오게된 경로를 적어주세요');
@@ -343,11 +342,6 @@ $(document).ready(function() {
 
     if (!bestProduct) {
       alert('가장 마음에 드는 상품을 적어주세요');
-      return false;
-    }
-
-    if (!bestVenture) {
-      alert('가장 응원하고 싶은 소셜벤처를 적어주세요');
       return false;
     }
 
@@ -365,8 +359,7 @@ $(document).ready(function() {
       name: name,
       email: email,
       howCome: howCome,
-      bestProduct: bestProduct,
-      bestVenture: bestVenture
+      bestProduct: bestProduct
     }).key;
 
     if (rsvpKey) alert('성공적으로 등록되었습니다.');
