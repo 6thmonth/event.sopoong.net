@@ -277,7 +277,13 @@ h4.first-slide-sectext, h4.third-slide-sectext {color: #ffffff; font-size: 44px;
 .parents-detail > img {max-width: 100%; border-radius: 100%; }
 .parents-detail > h2 {color: #131b28; font-family: "Open Sans"; font-size: 18px; font-weight: 600; letter-spacing: -0.25px; margin: 16px 0 5px; }
 .parents-detail > h2:after{height: auto; display: inline; }
-.bridegroom-friend {margin-top: 78px; }
+.bridegroom-friend {
+    margin-top: 78px;
+}
+
+.bridegroom-friend h3 a {
+    color: #131b28;
+}
 .wedd-seprator {margin-bottom: 75px;}
 .wedd-seprator > img {max-width: 100%; }
 .row.maids-inner-wrapper {margin-top: 60px; }
