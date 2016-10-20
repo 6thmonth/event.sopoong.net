@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 	const db = firebase.database()
 
-	db.ref('event/').on('value', function(result) {
+	db.ref('event/').once('value', function(result) {
     const values = result.val()
     const header = values.header
     const items = values.items
@@ -55,7 +55,7 @@ $(document).ready(function() {
       ')
     })
 
-	
+
 	// Main Menu Button
 	$('.main_menu_btn').on("click", function(e){
 		$(this).toggleClass('main_menu_btn_open');
@@ -304,5 +304,5 @@ $(document).ready(function() {
 
 
 jQuery(document).ready( function() {
-	
+
 });
