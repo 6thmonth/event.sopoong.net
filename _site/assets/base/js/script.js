@@ -1,6 +1,78 @@
-﻿$(document).ready(function() {
-	"use strict";
-	
+﻿
+
+$(document).ready(function() {
+	// "use strict";
+  	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyA32E9AbOHMN21SAJy3wrXaBkbAjEc3bp0",
+		authDomain: "admin-sopoong.firebaseapp.com",
+		databaseURL: "https://admin-sopoong.firebaseio.com",
+		storageBucket: "admin-sopoong.appspot.com",
+		messagingSenderId: "201886923120"
+	}
+
+	firebase.initializeApp(config);
+
+	const db = firebase.database()
+
+	db.ref('event/').once('value', function(result) {
+    const values = result.val()
+    const header = values.header
+    const items = values.items
+    const partners = values.partners
+
+    header.forEach(function(item) {
+      $('#home-slider').append('\
+        <li class="item">\
+          <img src="' + item.backgroundImg + '" alt="">\
+          <div class="forth-slider-text">\
+            <img class="logo" src="assets/base/images/beta/top_logo.png" alt="소풍 로고" >\
+            <div class="forth-slide-sectext">\
+              <h3><span class="sub-text">' + item.subtitle + '<span><br><span class="main-text">' + item.title + '<span><br></h3>\
+            </div>\
+          </div>\
+        </li>\
+      ')
+    })
+
+    items.forEach(function(item) {
+      $('.blog-inner-wrapper').append('\
+        <div class="blog-section col-xs-6 col-sm-6 col-md-4 skt_animate_when_almost_visible skt_bottom-to-top">\
+          <div class="blog-img-wrap">\
+            <img src="' + item.backgroundImg + '" alt="" />\
+            <div class="blog-over"></div>\
+              <div class="blog-meta-wrap slideUp">\
+                <span><strong>회사</strong> | ' + item.company + '</span>\
+                <span><strong>상품</strong> | ' + item.product + '</span>\
+                <span class="meta-date"><strong>가격</strong> | ' + item.price + '</span>\
+              </div>\
+            </div>\
+            <div class="blog-content-wrap">\
+              <h3>' + item.title + '</h3>\
+              <p>' + item.description + '</p>\
+              <a href="' + item.linkHref + '" target="_blank"><strong>' + item.linkTitle + '<i class="icon wedding-maids-right-arrow"></i></strong></a>\
+            </div>\
+          </div>\
+      ')
+    })
+
+    partners.forEach(function(item) {
+      $('#owl-demo').append('\
+      <div class="item">\
+      <div class="friend-img">\
+      <div class="imgoverlay">\
+      <a href="' + item.href + '" target="_blank">\
+      <img src="' + item.img + '" alt="' + item.text + '">\
+      </a>\
+      </div>\
+      </div>\
+      <h3><a href="' + item.href + '" target="_blank">' + item.text + '</a></h3>\
+      </div>\
+      ')
+    })
+
+
+
 	// Main Menu Button
 	$('.main_menu_btn').on("click", function(e){
 		$(this).toggleClass('main_menu_btn_open');
@@ -111,58 +183,6 @@
 	  }
 	}, 300);
 
-
-	// Countdown
-	var cutt = $.now();
-        var startDate = new Date();
-
-	$('.countdown').ClassyCountdown({
-            //end: endDate.getTime(),
-          end: 1473865200,
-            now:  $.now() / 1000,
-	    style: {
-	        element: "",
-	        textResponsive: .5,
-	        days: {
-	            gauge: {
-	                thickness: .08,
-	                bgColor: "#ffffff",
-	                fgColor: "#EE2537"
-	            },
-	            textCSS: 'font-szie:67px; color:#ffffff;'
-	        },
-	        hours: {
-	            gauge: {
-	                thickness: .08,
-	                bgColor: "#ffffff",
-	                fgColor: "#EA246F"
-	            },
-	            textCSS: 'font-szie:67px; color:#ffffff;'
-	        },
-	        minutes: {
-	            gauge: {
-	                thickness: .08,
-	                bgColor: "#ffffff",
-	                fgColor: "#24EC4B"
-	            },
-	            textCSS: 'font-szie:67px; color:#ffffff;'
-	        },
-	        seconds: {
-	            gauge: {
-	                thickness: .08,
-	                bgColor: "#ffffff",
-	                fgColor: "#EB7124"
-	            },
-	            textCSS: 'font-szie:67px; color:#ffffff;'
-	        }
-
-	    },
-	    onEndCallback: function() {
-	        console.log("Time out!");
-	    }
-	});
-
-
 	// prettyPhoto
 	$("a[data-rel^='prettyPhoto']").prettyPhoto({
 		hook: 'data-rel',
@@ -188,6 +208,24 @@
 
 		jQuery('#counter-wrapper::before, #wishlist-wrapper::before').parallax("center", 0.5);
 	// }
+    //WAYPOINTS MAGIC --------------------------
+    //---------------------------------------------------------
+    if ( typeof window['vc_waypoints'] !== 'function' ) {
+        function vc_waypoints() {
+            if (typeof jQuery.fn.waypoint !== 'undefined') {
+                jQuery( '.fade_in_hide, .skt_animate_when_almost_visible' ).waypoint({
+                    offset: '90%',
+                    handler: function() {
+                        jQuery(this.element).addClass( 'skt_start_animation' );
+                    }
+                });
+            }
+        }
+    }
+
+    vc_waypoints();
+  })
+
 });
 
 
@@ -280,84 +318,8 @@ $(document).ready(function() {
 	});
 });
 
-//WAYPOINTS MAGIC --------------------------
-//---------------------------------------------------------
-if ( typeof window['vc_waypoints'] !== 'function' ) {
-    function vc_waypoints() {
-        if (typeof jQuery.fn.waypoint !== 'undefined') {
-            jQuery( '.fade_in_hide, .skt_animate_when_almost_visible' ).waypoint({
-                offset: '90%',
-                handler: function() {
-                    jQuery(this.element).addClass( 'skt_start_animation' );
-                }
-            });
-        }
-    }
-}
+
+
 jQuery(document).ready( function() {
-	vc_waypoints();
+
 });
-
-$(document).ready(function() {
-  // Initialize Firebase
-  var config = {
-          apiKey: "AIzaSyBeoQjcjfpseYJfHU5wY754MM_UEHmUc8I",
-          authDomain: "thmonth-1.firebaseapp.com",
-          databaseURL: "https://thmonth-1.firebaseio.com",
-          storageBucket: "thmonth-1.appspot.com",
-  };
-  firebase.initializeApp(config)
-
-  var database = firebase.database()
-  database.ref('event/').on('value', function(result) {
-    var values = result.val()
-    var row1 = values['row-1']
-    var row4 = values['row-4']
-
-    //$('#home-slider .item:first-child .main-text').text(row1.mainText)
-    //$('#home-slider .item:first-child .sub-text').html(row1.subText)
-
-    //$('#blog-wrapper .section-heading-content p').html(row4.subText)
-  });
-
-  $('#rsvpform').on('submit', function(e) {
-    e.preventDefault();
-
-    var values = $(this).serializeArray();
-    var howCome = values[0].value;
-    var bestProduct = values[1].value;
-    var name = values[2].value;
-    var email = values[3].value;
-
-    if (!howCome) {
-      alert('오게된 경로를 적어주세요');
-      return false;
-    }
-
-    if (!bestProduct) {
-      alert('가장 마음에 드는 상품을 적어주세요');
-      return false;
-    }
-
-    if (!name) {
-      alert('성함을 적어주세요');
-      return false;
-    }
-
-    if (!email) {
-      alert('이메일을 알려주세요');
-      return false;
-    }
-
-    var rsvpKey = database.ref('event/survey').push({
-      name: name,
-      email: email,
-      howCome: howCome,
-      bestProduct: bestProduct
-    }).key;
-
-    if (rsvpKey) alert('성공적으로 등록되었습니다.');
-    return true;
-  });
-})
-

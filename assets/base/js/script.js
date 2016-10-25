@@ -19,6 +19,7 @@ $(document).ready(function() {
     const values = result.val()
     const header = values.header
     const items = values.items
+    const partners = values.partners
 
     header.forEach(function(item) {
       $('#home-slider').append('\
@@ -54,6 +55,22 @@ $(document).ready(function() {
           </div>\
       ')
     })
+
+    partners.forEach(function(item) {
+      $('#owl-demo').append('\
+      <div class="item">\
+      <div class="friend-img">\
+      <div class="imgoverlay">\
+      <a href="' + item.href + '" target="_blank">\
+      <img src="' + item.img + '" alt="' + item.text + '">\
+      </a>\
+      </div>\
+      </div>\
+      <h3><a href="' + item.href + '" target="_blank">' + item.text + '</a></h3>\
+      </div>\
+      ')
+    })
+
 
 
 	// Main Menu Button
